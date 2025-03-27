@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort a String</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            font-size: 18px;
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript Function to Sort a Given String</h2>
+
+    <label for="textInput">Enter a String:</label>
+    <input type="text" id="textInput" oninput="sortString()">
+    
+    <br><br>
+
+    <label for="sortedString">Sorted String:</label>
+    <input type="text" id="sortedString" readonly>
+
+    <script>
+        function sortString() {
+            let x = document.getElementById("textInput").value;
+            let y = x.split("").sort().join(""); 
+            document.getElementById("sortedString").value = y;
+        }
+    </script>
+
+</body>
+</html>

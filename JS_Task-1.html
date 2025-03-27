@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse a Number</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input, button {
+            font-size: 18px;
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript Function to Reverse a Number</h2>
+
+    <label for="numInput">Enter a Number:</label>
+    <input type="text" id="numInput" oninput="reverseNumber()">
+    
+    <br><br>
+
+    <label for="reversedNum">Reversed Number:</label>
+    <input type="text" id="reversedNum" readonly>
+
+    <script>
+        function reverseNumber() {
+            let x = document.getElementById("numInput").value;
+            let y = x.split("").reverse().join(""); 
+            document.getElementById("reversedNum").value = y;
+        }
+    </script>
+
+</body>
+</html>
